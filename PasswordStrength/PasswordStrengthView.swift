@@ -46,9 +46,9 @@ class PasswordStrengthView: UIView {
     private var strengthBar: UIView!
     private var hints = [UILabel]()
     private var rules: [Rule] = [
-        Rule(text: "Must contain as least 1 letter", regex: "[a-zA-Z]"),
-        Rule(text: "Must contain as least 1 number", regex: "[0-9]"),
-        Rule(text: "Must contain as least 6 characters", regex: ".{6,15}"),
+        Rule(text: "Must contain at least 1 letter", regex: "[a-zA-Z]"),
+        Rule(text: "Must contain at least 1 number", regex: "[0-9]"),
+        Rule(text: "Must contain at least 6 characters", regex: ".{6,15}"),
     ]
     
     override init(frame: CGRect) {
