@@ -1,5 +1,5 @@
 # PasswordStrengthView
-Strength bar and rules view for iOS
+Strength bar and rules' hints view for iOS
 
 ## Example
 
@@ -7,7 +7,7 @@ Strength bar and rules view for iOS
 
 ## How to
 
-On your viewcontroller add
+On your viewcontroller add:
 ```swift
 
 passwordTextField = UITextField()
@@ -21,7 +21,7 @@ let frame = CGRect(x: passwordTextField.frame.origin.x, y: passwordTextField.fra
 passwordStrength = PasswordStrengthView(frame: frame)
 view.addSubview(passwordStrength)
 ```
-and the following textfield's delegate 
+and the following textfield's delegate:
 
 ```swift
 func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
@@ -33,6 +33,16 @@ func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange
                 
     return true
 }
-
 ```
 
+You can add new rules:
+
+```swift
+passwordStrength.addRule(text: "Must contain 'leotok' or 'Leotok'", regex: "([a-zA-Z])*((leotok)|(Leotok))([a-zA-Z])*")
+```
+
+And you can also enable/disable the strengthBar or the hints:
+```swif
+passwordStrength.enableHints = true
+passwordStrength.enableBar = true
+```
