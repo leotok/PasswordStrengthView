@@ -42,7 +42,7 @@ passwordStrength.addRule(text: "Must contain 'leotok' or 'Leotok'", regex: "([a-
 ```
 
 And you can also enable/disable the strengthBar or the hints:
-```swif
+```swift
 passwordStrength.enableHints = true
 passwordStrength.enableBar = true
 ```
